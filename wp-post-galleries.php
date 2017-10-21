@@ -12,3 +12,10 @@
 require dirname(__FILE__) . '/config.php';
 
 require W2PG_OPTIONSDIR . '/src/w2pg-options.php';
+
+
+function w2pg_activation($plugin, $network_activation)
+{
+    var_dump('<pre>', $plugin, $network_activation);
+}
+add_action('activated_plugin', 'w2pg_activation', 10, 2);

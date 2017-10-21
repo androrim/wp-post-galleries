@@ -39,8 +39,6 @@ function w2pg_get_options($name = '')
     $options = get_option(W2PG_OPTNAME);
     $default = unserialize(W2PG_OPTDEFAULT);
 
-    var_dump($options);
-
     if ($options === false) {
         return $default;
     }
