@@ -1,6 +1,7 @@
 <?php
 
-function w2pg_get_galleries_attachments($post_id)
+
+function _w2pg_get_galleries_attachments($post_id)
 {
     $galleries_images = (array) get_post_meta($post_id, W2PG_METAKEY, true);
     $galleries_attachments = array();

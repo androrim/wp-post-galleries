@@ -1,6 +1,6 @@
 <?php
 
-function w2pg_get_options($name = '')
+function _w2pg_get_options($name = '')
 {
     $options = get_option(W2PG_OPTNAME);
     $default = unserialize(W2PG_OPTDEFAULT);
