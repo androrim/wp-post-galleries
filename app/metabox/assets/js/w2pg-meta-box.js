@@ -58,8 +58,10 @@
 
             var selecteds = gallery.find('.item.selected');
 
-            selecteds.remove();
-            deleteButton.addClass('hidden');
+            selecteds.fadeOut(200, function () {
+                selecteds.remove();
+                deleteButton.addClass('hidden');
+            });
         });
 
         addButton.click(function (event) {

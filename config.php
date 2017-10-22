@@ -10,6 +10,8 @@ define('W2PG_NONCE', 'androrim_w2pg');
 
 define('W2PG_OPTNAME', 'w2pg_options');
 
+define('W2PG_METAKEY', '_w2pg_items');
+
 define('W2PG_OPTIONSDIR', W2PGDIR . '/app/options');
 
 define('W2PG_METABOXDIR', W2PGDIR . '/app/metabox');

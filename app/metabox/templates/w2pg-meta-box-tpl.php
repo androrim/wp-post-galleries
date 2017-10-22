@@ -15,8 +15,16 @@
 
             <div class="items" data-parent="w2pg<?= $i ?>">
                 <?php
-                foreach ($attachments as $attachment) {
-                    echo _w2pg_parse_image_base($attachment);
+                if (isset($galleries_attachments[$i])) {
+                    foreach ($galleries_attachments[$i] as $attachment) {
+                        $image_attributes = wp_get_attachment_image_src($attachment->ID);
+
+                        $gallery_item = str_replace('%src%', $image_attributes[0], $base_template);
+                        $gallery_item = str_replace('%id%', $attachment->ID, $gallery_item);
+                        $gallery_item = str_replace('%i%', $i, $gallery_item);
+
+                        echo $gallery_item;
+                    }
                 }
                 ?>
             </div>

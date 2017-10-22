@@ -1,11 +1,23 @@
 <?php
 
-function _w2pg_parse_image_base($attachment)
+function w2pg_get_galleries_attachments($post_id)
 {
-    $image_attributes = wp_get_attachment_image_src($attachment->ID);
+    $galleries_images = (array) get_post_meta($post_id, W2PG_METAKEY, true);
+    $galleries_attachments = array();
 
-    $gallery_item = str_replace('%src%', $image_attributes[0], $base_template);
-    $gallery_item = str_replace('%id%', $attachment->ID, $gallery_item);
+    if (!empty($galleries_images)) {
+        foreach ($galleries_images as $gallery => $attachs_ids) {
+            $attachments = get_posts(array(
+                'post__in' => $attachs_ids,
+                'post_type' => 'attachment',
+                'numberposts' => -1,
+                'post_status' => null,
+            ));
 
-    return $gallery_item;
+            $galleries_attachments[$gallery] = $attachments;
+        }
+
+    }
+
+    return $galleries_attachments;
 }
