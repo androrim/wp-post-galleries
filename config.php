@@ -12,6 +12,10 @@ define('W2PG_OPTNAME', 'w2pg_options');
 
 define('W2PG_OPTIONSDIR', W2PGDIR . '/app/options');
 
+define('W2PG_METABOXDIR', W2PGDIR . '/app/metabox');
+
+define('W2PG_METABOXURL', plugin_dir_url(__FILE__) . 'app/metabox');
+
 define('W2PG_NOTIN', serialize(array(
     'attachment',
     'revision',

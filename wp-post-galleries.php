@@ -13,3 +13,6 @@ require dirname(__FILE__) . '/config.php';
 
 require W2PG_OPTIONSDIR . '/src/w2pg-options-functions.php';
 require W2PG_OPTIONSDIR . '/src/w2pg-options.php';
+
+require W2PG_METABOXDIR . '/src/w2pg-meta-box-functions.php';
+require W2PG_METABOXDIR . '/src/w2pg-meta-box.php';
