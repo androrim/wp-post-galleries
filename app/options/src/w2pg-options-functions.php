@@ -22,8 +22,12 @@ function w2pg_get_options($name = '')
         $options = $default;
     }
 
-    if (isset($options[$name])) {
-        return $options[$name];
+    if ($name !== '') {
+        if (isset($options[$name])) {
+            return $options[$name];
+        }
+
+        return false;
     }
 
     $GLOBALS['w2pg_options'] = $options;

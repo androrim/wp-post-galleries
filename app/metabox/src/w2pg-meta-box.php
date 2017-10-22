@@ -18,6 +18,8 @@ function w2pg_meta_box($post)
     $upload_link        = esc_url(get_upload_iframe_src('image', $post->ID));
     $base_template_path = W2PG_METABOXDIR . '/templates/w2pg-base-image-tpl.html';
     $base_template      = file_get_contents($base_template_path);
+    $galleries_count = w2pg_get_options($post->post_type);
+
     
     require W2PG_METABOXDIR . '/templates/w2pg-meta-box-tpl.php';
 }

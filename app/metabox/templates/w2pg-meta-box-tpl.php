@@ -1,5 +1,7 @@
+<?php $count = is_numeric($galleries_count) ? $galleries_count : 1; ?>
+
 <div id="w2pg-container">
-    <?php for ($i = 1; $i <= 2; $i++) : ?>
+    <?php for ($i = 1; $i <= $count; $i++) : ?>
         <div id="w2pg<?= $i ?>" class="w2pg" data-index="<?= $i ?>">
             <h3><?php _e('Gallery') ?> <?= $i ?></h3>
 
