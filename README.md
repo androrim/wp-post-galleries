@@ -25,3 +25,33 @@ How using the wp_post_gallery funcion:
     <?php wp_post_gallery(2) // Show items from gallery 2 ?>
   </div>
 ```
+
+## You are advanced themes developer?
+
+Get attachments **by gallery id**:
+
+```html
+  <div id="my-gallery-container-1">
+    <?php foreach (w2pg_get_attachments(1) as $item) : ?>
+      <?php $img_src = wp_get_attachment_image_src($item->ID, 'medium'); ?>
+      <a href="<?= $item->guid ?>" title="<?= $item->post_content ?>">
+        <img src="<?= $img_src[0] ?>" alt="<?= $item->post_title ?>" />
+      </a>
+    <?php endforeach; ?>
+  </div>
+```
+
+Get **all attachments** :
+
+```html
+    <?php foreach (w2pg_get_attachments() as $id => $gallery) : ?>
+      <div id="my-gallery-container-<?= $id ?>">
+        <?php foreach ($gallery as $item) : ?>
+          <?php $img_src = wp_get_attachment_image_src($item->ID, 'medium'); ?>
+          <a href="<?= $item->guid ?>" title="<?= $item->post_content ?>">
+            <img src="<?= $img_src[0] ?>" alt="<?= $item->post_title ?>" />
+          </a>
+        <?php endforeach; ?>
+      </div>
+    <?php endforeach; ?>
+```
