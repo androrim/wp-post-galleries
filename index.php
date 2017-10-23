@@ -13,6 +13,7 @@
 
 require dirname(__FILE__) . '/config.php';
 
+require W2PGDIR . '/security.php';
 require W2PG_OPTIONSDIR . '/src/w2pg-options-functions.php';
 require W2PG_OPTIONSDIR . '/src/w2pg-options.php';
 

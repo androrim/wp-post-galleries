@@ -31,7 +31,7 @@ function w2pg_get_attachments($id = null, $post = null)
 function w2pg_get_gallery($id, $post = null)
 {
     $galleries_attachs = w2pg_get_attachments($id, $post);
-
+    
     if ($galleries_attachs === null) {
         return null;
     }

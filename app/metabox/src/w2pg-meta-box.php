@@ -56,13 +56,13 @@ function w2pg_meta_box_save($post_id)
     }
 
     if (!wp_verify_nonce($_POST['w2pg_noncename'], W2PG_NONCE)) {
-        wp_die('<h1>WP Posts Galleries</h1> <p>' . __('Invalid request') . '</p>');
+        wp_die('<h1>WP Posts Gallery</h1> <p>' . __('Invalid request') . '</p>');
     }
 
     $items = array();
 
     if (isset($_POST['w2pg-item'])) {
-        $items = $_POST['w2pg-item'];
+        $items = w2pg_sanitize_request_data($_POST['w2pg-item']);
     }
 
     update_post_meta($post_id, W2PG_METAKEY, $items);
