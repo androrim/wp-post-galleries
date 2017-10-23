@@ -1,6 +1,6 @@
 <?php
 /*
-  Plugin Name: WP Post Galleries
+  Plugin Name: WP Post Gallery
   Plugin URI: https://androrim.github.io/wp-post-galleries/
   Description: Metabox galleries to WordPress post
   Version: 1.0
