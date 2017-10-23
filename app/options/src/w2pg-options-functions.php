@@ -1,6 +1,6 @@
 <?php
 
-function _w2pg_get_options($name = '')
+function w2pg_get_options($name = '')
 {
     $options = get_option(W2PG_OPTNAME);
     $default = unserialize(W2PG_OPTDEFAULT);
@@ -35,9 +35,9 @@ function _w2pg_get_options($name = '')
     return $options;
 }
 
-function _w2pg_make_base_template($attachment)
+function w2pg_make_base_template($attachment)
 {
-    $base = _w2pg_get_options('template');
+    $base = w2pg_get_options('template');
     $img_full = wp_get_attachment_image_src($attachment->ID, 'full');
     $img_medium = wp_get_attachment_image_src($attachment->ID, 'medium');
     $img_thumb = wp_get_attachment_image_src($attachment->ID, 'medium');

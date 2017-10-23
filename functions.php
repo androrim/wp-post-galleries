@@ -15,8 +15,7 @@ function w2pg_get_attachments($id = null, $post = null)
         return null;
     }
 
-
-    $galleries_attachs = _w2pg_get_galleries_attachments($post->ID);
+    $galleries_attachs = w2pg_get_galleries_attachments($post->ID);
 
     if ($id) {
         if (!isset($galleries_attachs[$id])) {
@@ -29,17 +28,16 @@ function w2pg_get_attachments($id = null, $post = null)
     return $galleries_attachs;
 }
 
-function wp_post_gallery($id, $post = null)
+function w2pg_get_gallery($id, $post = null)
 {
     $galleries_attachs = w2pg_get_attachments($id, $post);
-
-
+    
     if ($galleries_attachs === null) {
         return null;
     }
 
     foreach ($galleries_attachs as $attach) {
-        echo _w2pg_make_base_template($attach);
+        echo w2pg_make_base_template($attach);
     }
 }
 
