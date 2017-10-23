@@ -1,11 +1,13 @@
 <?php
+
 /*
-  Plugin Name: WP Post Gallery
-  Plugin URI: https://androrim.github.io/wp-post-galleries/
-  Description: Metabox galleries to WordPress post
+  Plugin Name: WordPress Post Gallery
+  Plugin URI: https://androrim.github.io/wp-post-gallery/
+  Description: Metabox galleries to WordPress posts
   Version: 1.0
   Author: Leandro de Amorim <androrim@gmail.com>
   Author URI: https://www.linkedin.com/in/leandrodeamorim
+  Text Domain: wp-post-gallery
   License: GPLv2
  */
 
