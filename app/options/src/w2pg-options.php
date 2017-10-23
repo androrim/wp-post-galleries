@@ -14,7 +14,7 @@ add_action('admin_menu', 'w2pg_options_admin_menu');
 function w2pg_options()
 {
     $not_in  = unserialize(W2PG_NOTIN);
-    $options = _w2pg_get_options();
+    $options = w2pg_get_options();
 
     if ($options === false) {
         $options = unserialize(W2PG_OPTDEFAULT);
