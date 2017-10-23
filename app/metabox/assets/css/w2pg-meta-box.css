@@ -1,0 +1,32 @@
+#w2pg-container .items {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#w2pg-container .item.selected {
+    box-shadow: 0 0 0 5px #0073aa;
+}
+
+#w2pg-container .actions {
+    margin-bottom: 25px;
+    display: flex;
+}
+
+#w2pg-container .actions a {
+    margin-right: 25px;
+}
+
+#w2pg-container .item {
+    margin: 12px;
+    cursor: pointer;
+}
+
+#w2pg-container .item img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    object-position: center;
+}
+
