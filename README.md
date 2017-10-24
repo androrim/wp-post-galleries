@@ -18,11 +18,11 @@ How using the wp_post_gallery funcion:
 
 ```html
   <div id="my-gallery-container-1">
-    <?php wp_post_gallery(1) // Show items from gallery 1 ?>
+    <?php w2pg_get_gallery(1) // Show items from gallery 1 ?>
   </div>
 
   <div id="my-gallery-container-2">
-    <?php wp_post_gallery(2) // Show items from gallery 2 ?>
+    <?php w2pg_get_gallery(2) // Show items from gallery 2 ?>
   </div>
 ```
 
