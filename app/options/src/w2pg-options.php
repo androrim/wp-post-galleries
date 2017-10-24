@@ -31,9 +31,9 @@ function w2pg_options_save($data)
     }
     
     $options = null;
-    
-    if (isset($data['w2pg_options'])) {
-        w2pg_sanitize_request_data($data['w2pg_options']);
+      
+    if (isset($data['w2pg_options']['in'])) {
+       $options = w2pg_sanitize_request_data($data['w2pg_options']);
     }
     
     update_option(W2PG_OPTNAME, $options);
