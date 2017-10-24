@@ -22,31 +22,17 @@ require W2PG_METABOXDIR . '/src/w2pg-meta-box.php';
 
 require W2PGDIR . '/functions.php';
 
+
 register_activation_hook(__FILE__, 'w2pg_activation');
 
-/**
- * Runs only when the plugin is activated.
- * @since 0.1.0
- */
 function w2pg_activation()
 {
-
-    /* Create transient data */
-    set_transient('fx-admin-notice-example', true, 5);
+    set_transient('w2pg-activate-notice', true, 5);
 }
 
-/* Add admin notice */
-add_action('admin_notices', 'fx_admin_notice_example_notice');
-
-/**
- * Admin Notice on Activation.
- * @since 0.1.0
- */
-function fx_admin_notice_example_notice()
+function w2pg_activation_notice()
 {
-
-    /* Check transient */
-    if (get_transient('fx-admin-notice-example')) {
+    if (get_transient('w2pg-activate-notice')) {
         ?>
         <div class="updated notice">
             <p><?php _e('Thank you for using') ?> <strong>WordPress Post Gallery</strong>!</p>
@@ -59,3 +45,5 @@ function fx_admin_notice_example_notice()
         delete_transient('fx-admin-notice-example');
     }
 }
+
+add_action('admin_notices', 'w2pg_activation_notice');
